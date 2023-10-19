@@ -1,14 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import companiseSlice from './compnents/companiseSlice'
+import { configureStore } from '@reduxjs/toolkit';
+import companiseSlice from './compnents/companiseSlice';
 
-export type RootState = {
-  companiseR: ReturnType<typeof companiseSlice>
-}
-
- const store = configureStore({
+export const store = configureStore({
   reducer: {
-    companiseR: companiseSlice
-  },
+    companiseReducer: companiseSlice
+  }
 });
 
 export default store;
